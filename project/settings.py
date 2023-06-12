@@ -84,7 +84,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '24320919',
         # 'HOST': '127.0.0.1',
-        'HOST': 'run_mysql',
+        'HOST': '172.17.0.2',
         'PORT': '3306',
     }
 }

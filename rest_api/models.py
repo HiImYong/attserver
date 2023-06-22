@@ -8,3 +8,9 @@ class Clients(models.Model):
     userId = models.CharField(max_length=30)
     userPw = models.CharField(max_length=30)
     
+class LastTime(models.Model):
+    class Meta: db_table = "last_time"
+    userId = models.CharField(max_length=30, unique=1)
+    lastTime = models.TimeField()
+    
+

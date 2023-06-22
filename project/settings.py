@@ -83,8 +83,8 @@ DATABASES = {
         'NAME': 'att_server_db',
         'USER': 'root',
         'PASSWORD': '24320919',
-        # 'HOST': '127.0.0.1',
-        'HOST': '172.17.0.2',
+        'HOST': '127.0.0.1',
+        # 'HOST': '172.17.0.2',
         'PORT': '3306',
     }
 }
@@ -131,5 +131,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS = ['18.217.36.75']
+ALLOWED_HOSTS = ['18.217.36.75', '127.0.0.1']
 

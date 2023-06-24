@@ -83,8 +83,8 @@ DATABASES = {
         'NAME': 'att_server_db',
         'USER': 'root',
         'PASSWORD': '24320919',
-        'HOST': '127.0.0.1',
-        # 'HOST': '172.17.0.2',
+        # 'HOST': '127.0.0.1',
+        'HOST': '172.17.0.2',
         'PORT': '3306',
     }
 }

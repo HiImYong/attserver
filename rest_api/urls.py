@@ -77,10 +77,18 @@ def get_id(request):
 def set_lastTime(request):
     try:
         print(">> set last time")
-        post_userId = request.POST.get('userId')
-        pose_time = request.POST.get('lastTime')   
-        times = LastTime(userId=post_userId, lastTime=pose_time)
-        times.save()
+        data = json.loads(request.body)
+        
+        post_userId = data.get('userId')
+        post_time = data.get('lastTime')   
+        
+        tableId = LastTime.objects.filter(userId = post_userId).first()
+        if tableId == None :            
+            times = LastTime(userId=post_userId, lastTime=post_time)
+            times.save()
+        elif tableId:
+            tableId.lastTime = post_time
+            tableId.save()
         dict_id = {'result' : 'success'}
         return dict_id
     
